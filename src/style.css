@@ -1,0 +1,365 @@
+:root {
+  --bg: #0b0f14;
+  --card: #11161d;
+  --muted: #8b9bb4;
+  --text: #e6edf6;
+  --brand: #65b7ff;
+  --ring: #2a6fbb;
+  --border: #1b2330;
+  --accent: #1a2533;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  height: 10000px;
+  margin: 0 7rem;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+    "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+body.no-scroll {
+  overflow: hidden;
+  position: fixed;
+}
+
+/* navigasi */
+nav,
+nav div,
+nav .nav-list ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+nav {
+  position: fixed;
+
+  top: 0;
+  right: 0;
+  background: linear-gradient(
+    to top,
+    rgba(11, 15, 20, 0.9),
+    rgba(27, 35, 48, 0.9)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 100%;
+  padding: 1rem 7rem;
+  border-bottom: 1px solid var(--border);
+}
+
+nav .hamburger {
+  display: none;
+}
+
+nav div h2 {
+  font-size: 2rem;
+  background: linear-gradient(45deg, var(--brand), var(--ring));
+  border-radius: 10px;
+  padding: 0.2rem 0.4rem;
+  color: var(--accent);
+  font-weight: bold;
+  box-shadow: 0 2px 10px var(--ring);
+}
+
+nav div h3 {
+  font-size: 1.2rem;
+}
+
+nav div h3 span {
+  color: var(--muted);
+}
+
+nav .nav-list ul {
+  list-style: none;
+  margin-right: 50px;
+}
+
+nav .nav-list ul li {
+  padding: 0.4rem 0.6rem;
+  border-radius: 7px;
+  transition: background 0.2s ease;
+}
+
+nav .nav-list ul li:hover {
+  background: var(--border);
+}
+
+nav .nav-list ul li a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+nav .nav-list .contact-me,
+nav .nav-list .viewport-projects {
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav .nav-list .viewport-projects {
+  background: linear-gradient(45deg, var(--bg), var(--accent));
+  background-size: 200% 200%;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+nav .nav-list .contact-me:last-child {
+  background: linear-gradient(to bottom, var(--brand), var(--ring));
+  color: var(--accent);
+  box-shadow: 0 2px 10px var(--ring);
+}
+/* navigasi end */
+
+/* jumbotron */
+.jumbotron {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  scroll-margin-top: 100px;
+}
+
+.jumbotron .jumbotron-text,
+.jumbotron .jumbotron-image {
+  padding: 20px;
+}
+
+.jumbotron .jumbotron-text h1 {
+  font-size: 2.5rem;
+}
+
+.jumbotron .jumbotron-text h1 span {
+  color: var(--ring);
+}
+
+.jumbotron .jumbotron-text p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.jumbotron .jumbotron-text a {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border: none;
+  box-shadow: -2px 2px 10px var(--ring);
+  background: linear-gradient(to bottom, var(--brand), var(--ring));
+  color: var(--accent);
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.jumbotron .jumbotron-text a:last-child {
+  color: var(--text);
+  background: linear-gradient(45deg, var(--bg), var(--accent));
+  background-size: 200% 200%;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 0;
+}
+
+.jumbotron .jumbotron-image img {
+  display: block;
+  width: 350px;
+  box-shadow: 0px 0px 50px var(--ring);
+  border-radius: 50px;
+  margin: auto;
+}
+/* jumbotron end */
+
+/* about */
+.about {
+  padding: 2rem 0;
+  margin-top: 2rem;
+  scroll-margin-top: 70px;
+}
+
+.about .container-about h1 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.about .container-about .about-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.about .container-about .about-card .card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.about .container-about .about-card .card p {
+  line-height: 1.3rem;
+}
+
+.about .container-about .about-card .card p span {
+  color: var(--muted);
+  font-weight: bold;
+}
+
+/* Skills */
+
+.about .container-skills {
+  margin-top: 3rem;
+}
+
+.about .container-skills h1 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.about .container-skills .skills-content {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  gap: 10px;
+}
+
+.about .container-skills .skills-content p {
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border: 1px solid var(--border);
+  background: linear-gradient(45deg, var(--bg), var(--accent));
+  background-size: 200% 200%;
+  color: var(--text);
+}
+/* Skills end */
+
+/* about end */
+
+/* responsive */
+@media (max-width: 767px) {
+  body {
+    margin: 0 0.5rem;
+  }
+
+  /* navigasi */
+  nav {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  nav .hamburger {
+    display: block;
+    position: relative;
+  }
+
+  nav .hamburger label {
+    cursor: pointer;
+  }
+
+  nav .hamburger label span {
+    display: block;
+    background-color: var(--text);
+    margin: 5px;
+    border-radius: 10px;
+    height: 5px;
+    width: 35px;
+    padding: 3px;
+  }
+
+  nav .hamburger label span:last-child {
+    width: 25px;
+  }
+
+  nav input.hamburger,
+  nav .nav-list {
+    display: none;
+  }
+  nav .nav-list {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -500px;
+    padding: 1rem;
+    background: linear-gradient(45deg, var(--accent), var(--bg));
+    width: 60%;
+    height: 100dvh;
+    transition: left 0.3s ease;
+  }
+  nav .nav-list.open {
+    left: 0;
+  }
+
+  nav .nav-list .close {
+    position: absolute;
+    top: 5px;
+    right: -10px;
+  }
+
+  nav .nav-list .close span {
+    display: block;
+    background-color: var(--text);
+    border-radius: 10px;
+    width: 35px;
+    padding: 3px;
+  }
+
+  nav .nav-list .close span:first-child {
+    transform: rotate(45deg) translate(30px, -5px);
+  }
+  nav .nav-list .close span:nth-child(2) {
+    transform: rotate(-45deg) translate(-25px, 0px);
+  }
+
+  nav .nav-list ul {
+    flex-direction: column;
+    align-items: start;
+    margin: 2rem 0 0 0;
+    width: 100%;
+  }
+
+  nav .nav-list ul li {
+    width: 100%;
+    padding: 0.7rem 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  nav .nav-list .viewport-projects,
+  nav .nav-list .contact-me {
+    display: none;
+  }
+
+  nav div h3 {
+    display: none;
+  }
+  /* navigasi end */
+
+  /* jumbotron */
+  .jumbotron {
+    margin-top: 120px;
+    flex-wrap: wrap-reverse;
+  }
+  .jumbotron .jumbotron-image {
+    width: 100%;
+  }
+
+  .jumbotron .jumbotron-image img {
+    box-shadow: 0px 0px 50px var(--ring);
+    width: 200px;
+  }
+  /* jumbotron end */
+}
+
+/* responsive end*/

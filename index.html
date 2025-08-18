@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <!-- Navigation / Navigasi -->
+    <nav>
+      <!-- Checkbox di level nav -->
+      <input type="checkbox" id="menu-toggle" class="hamburger" />
+
+      <!-- Hamburger -->
+      <div class="hamburger">
+        <label for="menu-toggle">
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <!-- Judul -->
+      <div class="judul">
+        <h2>S3</h2>
+        <h3>Syair Surya <span>Samudra</span></h3>
+      </div>
+
+      <!-- Nav list -->
+      <div class="nav-list">
+        <div class="close">
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Experience</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <a class="viewport-projects" href="#">View Projects</a>
+        <a class="contact-me" href="#">Contact Me</a>
+      </div>
+    </nav>
+
+    <!-- Hero / Jumbotron -->
+    <header id="home" class="jumbotron">
+      <div class="jumbotron-text">
+        <h1>Hi, I'm <span>Syair Surya Samudra</span> — Frontend Developer</h1>
+        <p>
+          I create modern, high-performance websites with clean UI/UX and
+          maintainable code.
+        </p>
+        <a href="#">Download CV</a>
+        <a href="#">View Portfolio</a>
+      </div>
+
+      <div class="jumbotron-image">
+        <img src="src/img/img-jumbotron.png" alt="syair surya samudra img" />
+      </div>
+    </header>
+
+    <!-- About / Tentang Saya -->
+    <section id="about" class="about">
+      <div class="container-about">
+        <h1>About Me</h1>
+        <div class="about-card">
+          <div class="card">
+            <p>
+              I’m a developer passionate about crafting smooth user interfaces
+              and delivering optimal performance. I have experience building
+              landing pages, admin dashboards, and small to medium-scale web
+              applications. I especially enjoy working with design systems,
+              typography, and accessibility.
+            </p>
+          </div>
+          <div class="card">
+            <p>
+              <span>Work values:</span> honest communication, fast iteration,
+              and well-structured documentation.
+            </p>
+            <p>
+              <span>Tools:</span>
+              HTML, CSS, JavaScript, and Node.js for simple backend needs.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container-skills">
+        <h1>Skills</h1>
+        <div class="skills-content">
+          <p>HTML</p>
+          <p>CSS Modern</p>
+          <p>Responsif</p>
+          <p>JavaScript (DOM)</p>
+          <p>Git & GitHub</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects / Proyek -->
+    <section id="projects"></section>
+
+    <!-- Experience / Pengalaman -->
+    <section id="experience"></section>
+
+    <!-- Contact / Kontak -->
+    <section id="contact"></section>
+
+    <!-- Footer / Bagian Bawah -->
+    <footer></footer>
+
+    <script src="src/main.js"></script>
+  </body>
+</html>
