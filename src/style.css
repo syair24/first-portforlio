@@ -480,7 +480,7 @@ nav .nav-list .contact-me:last-child {
     padding: 1rem;
 
     background: linear-gradient(45deg, var(--accent), var(--bg));
-    width: 60%;
+    width: 80%;
     height: 100dvh;
     transition: left 0.5s ease;
   }
