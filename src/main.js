@@ -1,6 +1,6 @@
 // nav bar
-let navList = document.querySelector(".nav-list");
 let hamburger = document.querySelector(".hamburger");
+let navList = document.querySelector(".nav-list");
 let closeBtn = document.querySelector(".close");
 
 function openMenu() {

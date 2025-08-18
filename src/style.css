@@ -17,8 +17,6 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  height: 10000px;
-  margin: 0 7rem;
   font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
     "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
@@ -61,7 +59,7 @@ nav .hamburger {
   display: none;
 }
 
-nav div h2 {
+nav .judul h2 {
   font-size: 2rem;
   background: linear-gradient(45deg, var(--brand), var(--ring));
   border-radius: 10px;
@@ -71,12 +69,16 @@ nav div h2 {
   box-shadow: 0 2px 10px var(--ring);
 }
 
-nav div h3 {
+nav .judul h3 {
   font-size: 1.2rem;
 }
 
-nav div h3 span {
+nav .judul h3 span {
   color: var(--muted);
+}
+
+nav .nav-list h2 {
+  display: none;
 }
 
 nav .nav-list ul {
@@ -84,13 +86,13 @@ nav .nav-list ul {
   margin-right: 50px;
 }
 
-nav .nav-list ul li {
+nav .nav-list ul li a {
   padding: 0.4rem 0.6rem;
   border-radius: 7px;
   transition: background 0.2s ease;
 }
 
-nav .nav-list ul li:hover {
+nav .nav-list ul li:hover a {
   background: var(--border);
 }
 
@@ -124,7 +126,7 @@ nav .nav-list .contact-me:last-child {
 
 /* jumbotron */
 .jumbotron {
-  margin-top: 100px;
+  margin: 100px 7rem 0 7rem;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -182,6 +184,7 @@ nav .nav-list .contact-me:last-child {
 
 /* about */
 .about {
+  margin: 0 7rem;
   padding: 2rem 0;
   margin-top: 2rem;
   scroll-margin-top: 70px;
@@ -247,9 +250,187 @@ nav .nav-list .contact-me:last-child {
 
 /* about end */
 
+.projects {
+  margin: 0 7rem;
+  scroll-margin-top: 100px;
+}
+
+.projects h1 {
+  font-size: 1.7rem;
+  margin: 5rem 0 1rem 0;
+}
+
+.projects .container {
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.projects .container .card-projects {
+  width: 350px;
+  background: var(--card);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.projects .container .card-projects .img-projects img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.projects .container .card-projects .text-projects {
+  padding: 1.5rem 1rem;
+  height: 100%;
+}
+
+.projects .container .card-projects .text-projects h3 {
+  font-size: 1.5rem;
+}
+
+.projects .container .card-projects .text-projects p {
+  margin: 0.5rem 0;
+}
+
+.projects .container .card-projects .text-projects div span {
+  display: inline-block;
+  background: var(--accent);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.8rem;
+  padding: 2px 5px;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.projects .container .card-projects .text-projects div a {
+  background: linear-gradient(45deg, var(--bg), var(--accent));
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+/* projects end */
+
+/* contact */
+.contact {
+  margin: 5rem 7rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2rem;
+  scroll-margin-top: 100px;
+}
+
+.contact h1 {
+  color: var(--text);
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: var(--muted);
+}
+
+.contact form .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact form .container .form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 300px;
+}
+
+.contact form .container .form-group label,
+.contact form div.form-group label {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact form .container .form-group input,
+.contact form .form-group textarea {
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  background: var(--bg);
+  font-size: 1.2rem;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.contact form textarea {
+  height: 200px;
+  resize: none;
+}
+
+.contact form button {
+  align-self: flex-start;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, var(--brand), var(--ring));
+  color: var(--accent);
+  box-shadow: 0 2px 10px var(--ring);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* contact end */
+
+/* footer */
+.footer {
+  background-color: var(--card);
+  color: var(--text);
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.footer .social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer .social-icons a img {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.3s ease;
+}
+
+.footer .social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+/* footer end */
+
 /* responsive */
 @media (max-width: 767px) {
-  body {
+  .jumbotron,
+  .about,
+  .projects,
+  .contact {
     margin: 0 0.5rem;
   }
 
@@ -286,29 +467,51 @@ nav .nav-list .contact-me:last-child {
   nav .nav-list {
     display: none;
   }
+
+  nav .judul h2 {
+    font-size: 1.5rem;
+  }
+
   nav .nav-list {
     display: block;
     position: fixed;
     top: 0;
     left: -500px;
     padding: 1rem;
+
     background: linear-gradient(45deg, var(--accent), var(--bg));
     width: 60%;
     height: 100dvh;
-    transition: left 0.3s ease;
+    transition: left 0.5s ease;
   }
+
+  nav .nav-list h2 {
+    display: block;
+    font-size: 1.2rem;
+    width: 80%;
+  }
+
+  nav .nav-list h2 span {
+    color: var(--muted);
+  }
+
   nav .nav-list.open {
     left: 0;
   }
 
   nav .nav-list .close {
     position: absolute;
-    top: 5px;
-    right: -10px;
+    top: 8px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0px;
+    width: 50px;
+    cursor: pointer;
   }
 
   nav .nav-list .close span {
-    display: block;
     background-color: var(--text);
     border-radius: 10px;
     width: 35px;
@@ -316,23 +519,29 @@ nav .nav-list .contact-me:last-child {
   }
 
   nav .nav-list .close span:first-child {
-    transform: rotate(45deg) translate(30px, -5px);
+    transform: rotate(45deg) translate(4px, 6px);
   }
   nav .nav-list .close span:nth-child(2) {
-    transform: rotate(-45deg) translate(-25px, 0px);
+    transform: rotate(-45deg) translate(4px, -6px);
   }
 
   nav .nav-list ul {
+    border-top: 1px solid var(--border);
     flex-direction: column;
     align-items: start;
-    margin: 2rem 0 0 0;
+    margin: 1rem 0 0 0;
+    padding-top: 0.5rem;
     width: 100%;
   }
 
   nav .nav-list ul li {
     width: 100%;
-    padding: 0.7rem 0.5rem;
+  }
+
+  nav .nav-list ul li a {
+    display: block;
     font-size: 1.2rem;
+    padding: 0.7rem 0.5rem;
   }
 
   nav .nav-list .viewport-projects,
@@ -340,7 +549,7 @@ nav .nav-list .contact-me:last-child {
     display: none;
   }
 
-  nav div h3 {
+  nav .judul h3 {
     display: none;
   }
   /* navigasi end */
@@ -350,6 +559,24 @@ nav .nav-list .contact-me:last-child {
     margin-top: 120px;
     flex-wrap: wrap-reverse;
   }
+
+  .jumbotron .jumbotron-text h1 {
+    font-size: 2rem;
+  }
+
+  .jumbotron .jumbotron-text p {
+    font-size: 1.1rem;
+  }
+
+  .jumbotron .jumbotron-text a {
+    font-size: 1rem;
+  }
+
+  .jumbotron .jumbotron-text,
+  .jumbotron .jumbotron-image {
+    padding: 0.5rem;
+  }
+
   .jumbotron .jumbotron-image {
     width: 100%;
   }
@@ -359,6 +586,18 @@ nav .nav-list .contact-me:last-child {
     width: 200px;
   }
   /* jumbotron end */
+
+  /* contacts */
+  .contact {
+    margin: 3rem 1rem;
+  }
+  /* contacts end */
+
+  /* footer */
+  .footer {
+    padding: 2rem 1rem;
+  }
+  /* footer end */
 }
 
 /* responsive end*/
