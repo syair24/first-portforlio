@@ -126,7 +126,7 @@ nav .nav-list .contact-me:last-child {
 
 /* jumbotron */
 .jumbotron {
-  margin: 100px 7rem 0 7rem;
+  margin: 100px 7rem 5rem 7rem;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -270,6 +270,7 @@ nav .nav-list .contact-me:last-child {
 .projects .container .card-projects {
   width: 350px;
   background: var(--card);
+  border: 1px solid var(--border);
   border-radius: 15px;
   overflow: hidden;
 }
@@ -352,8 +353,8 @@ nav .nav-list .contact-me:last-child {
 .contact form .container .form-group label,
 .contact form div.form-group label {
   display: block;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
 }
 
 .contact form .container .form-group input,
@@ -555,7 +556,8 @@ nav .nav-list .contact-me:last-child {
 
   /* jumbotron */
   .jumbotron {
-    margin-top: 120px;
+    margin-top: 100px;
+    margin-bottom: 3rem;
     flex-wrap: wrap-reverse;
   }
 
@@ -578,6 +580,7 @@ nav .nav-list .contact-me:last-child {
 
   .jumbotron .jumbotron-image {
     width: 100%;
+    margin-bottom: 1rem;
   }
 
   .jumbotron .jumbotron-image img {
@@ -586,9 +589,16 @@ nav .nav-list .contact-me:last-child {
   }
   /* jumbotron end */
 
+  /* project */
+  .projects .container {
+    margin: 0 1rem;
+  }
+  /* project end */
+
   /* contacts */
   .contact {
     margin: 3rem 0.5rem;
+    padding: 2rem 1rem;
   }
   /* contacts end */
 
