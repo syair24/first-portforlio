@@ -15,6 +15,7 @@
 }
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 body {
   font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
@@ -40,7 +41,7 @@ nav .nav-list ul {
 
 nav {
   position: fixed;
-
+  z-index: 999;
   top: 0;
   right: 0;
   background: linear-gradient(
@@ -261,14 +262,18 @@ nav .nav-list .contact-me:last-child {
 }
 
 .projects .container {
-  justify-content: space-around;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2rem;
+  overflow-x: visible;
+  justify-content: center;
+  scroll-behavior: smooth;
 }
 
 .projects .container .card-projects {
-  width: 350px;
+  box-shadow: 0px 0 15px var(--accent);
+  width: calc(33.33% - 2rem);
+  flex-shrink: 0;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 15px;
@@ -592,6 +597,16 @@ nav .nav-list .contact-me:last-child {
   /* project */
   .projects .container {
     margin: 0 1rem;
+    padding: 1rem;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    justify-content: flex-start;
+  }
+
+  .projects .container .card-projects {
+    scroll-snap-align: center;
+    width: 100%;
   }
   /* project end */
 
