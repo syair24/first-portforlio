@@ -54,6 +54,7 @@ nav {
   width: 100%;
   padding: 1rem 7rem;
   border-bottom: 1px solid var(--border);
+  z-index: 999;
 }
 
 nav .hamburger {
@@ -323,11 +324,14 @@ nav .nav-list .contact-me:last-child {
 /* contact */
 .contact {
   margin: 5rem 7rem;
-  background: var(--card);
-  border: 1px solid var(--border);
+  scroll-margin-top: 100px;
+}
+
+.contact .container {
   border-radius: 20px;
   padding: 2rem;
-  scroll-margin-top: 100px;
+  background: var(--card);
+  border: 1px solid var(--border);
 }
 
 .contact h1 {
@@ -336,34 +340,34 @@ nav .nav-list .contact-me:last-child {
   margin-bottom: 1rem;
 }
 
-.contact form {
+.contact .container form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   color: var(--muted);
 }
 
-.contact form .container {
+.contact .container form .container-group {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
-.contact form .container .form-group {
+.contact .container form .container-group .form-group {
   display: flex;
   flex-direction: column;
   flex: 1 1 300px;
 }
 
-.contact form .container .form-group label,
-.contact form div.form-group label {
+.contact .container form .container-group .form-group label,
+.contact .container form div.form-group label {
   display: block;
   font-size: 1.1rem;
   margin-bottom: 0.2rem;
 }
 
-.contact form .container .form-group input,
-.contact form .form-group textarea {
+.contact .container form .container-group .form-group input,
+.contact .container form .form-group textarea {
   padding: 10px;
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -375,12 +379,12 @@ nav .nav-list .contact-me:last-child {
   outline: none;
 }
 
-.contact form textarea {
+.contact .container form textarea {
   height: 200px;
   resize: none;
 }
 
-.contact form button {
+.contact .container form button {
   align-self: flex-start;
   padding: 0.7rem 1.5rem;
   font-size: 1.1rem;
@@ -594,7 +598,21 @@ nav .nav-list .contact-me:last-child {
   }
   /* jumbotron end */
 
+  /* about */
+  .about .container-about h1,
+  .about .container-skills h1 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  /* about end */
+
   /* project */
+  .projects h1 {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
   .projects .container {
     margin: 0 1rem;
     padding: 1rem;
@@ -611,8 +629,15 @@ nav .nav-list .contact-me:last-child {
   /* project end */
 
   /* contacts */
-  .contact {
-    margin: 3rem 0.5rem;
+
+  .contact h1 {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 5rem;
+  }
+
+  .contact .container {
+    margin: 1.5rem 0.5rem 3rem 0.5rem;
     padding: 2rem 1rem;
   }
   /* contacts end */
