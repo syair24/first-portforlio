@@ -327,6 +327,10 @@ nav .nav-list .contact-me:last-child {
   scroll-margin-top: 100px;
 }
 
+.contact[data-aos] {
+  transform: none !important; /* cegah geser */
+}
+
 .contact .container {
   border-radius: 20px;
   padding: 2rem;
@@ -437,6 +441,11 @@ nav .nav-list .contact-me:last-child {
 
 /* responsive */
 @media (max-width: 767px) {
+  body,
+  html {
+    overflow-x: hidden;
+  }
+
   .jumbotron,
   .about,
   .projects,
@@ -446,6 +455,7 @@ nav .nav-list .contact-me:last-child {
 
   /* navigasi */
   nav {
+    position: fixed;
     flex-wrap: wrap;
     padding: 1rem;
   }
